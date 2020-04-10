@@ -3,14 +3,14 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters: 
   ProjectSource: 
     Type: String
-    Default: "https://github.com/qswitcher/imgterest"
+    Default: "https://github.com/PaulGLujan/react-aws-cd"
     Description: "Source control URL (e.g. Github)"
   GithubOwner:
     Type: String
-    Default: qswitcher
+    Default: PaulGLujan
   GithubRepo:
     Type: String
-    Default: my-test-app
+    Default: react-aws-cd
   GithubOAuthToken:
     Type: String
     Description: "Github personal access token"
@@ -180,7 +180,7 @@ Resources:
             files:
               - '**/*'
             base-directory: build
-  PipelineBucket: 
+  PipelineBucket:
     Type: 'AWS::S3::Bucket'
     Properties: {}
   DeployBucket:
